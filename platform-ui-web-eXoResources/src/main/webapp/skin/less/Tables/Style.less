@@ -1,6 +1,7 @@
 
 .uiGrid.table { 
 	border: 1px solid @tableBorder;
+    table-layout: fixed;
 	thead tr:first-child {
 		.box-shadow(0px 1px 2px -1px rgba(13,13,13,0.2)); 
 	}
@@ -24,8 +25,12 @@
 			text-align: center;
 		}
 		.text {
+            display: block;
 			overflow: hidden;
 		}
+        .Text {
+          overflow: hidden;
+        }
 	}
 	tr {		
 		th {

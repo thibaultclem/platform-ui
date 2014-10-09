@@ -43,7 +43,9 @@
 			</div> 			
 		</div>
 		<div class="groupDetail">
-			<% uicomponent.renderChild(UIGroupDetail.class) %>
+		    <div class="innerGroupDetail">
+			    <% uicomponent.renderChild(UIGroupDetail.class) %>
+			</div>
 		</div>
 	</div>
 </div>
