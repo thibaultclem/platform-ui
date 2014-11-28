@@ -139,8 +139,30 @@
 	  clickRightMouse : function(event, elemt, menuId, objId, whiteList, opt) {
 	    if (!event)
 	      event = window.event;
-	
-	    var contextMenu = document.getElementById(menuId);
+
+      $.ajax({
+        url: "/portal/rest/office/test?objId=" + objId,
+        dataType: "text",
+        type: "GET",
+        async: false
+        //	timeout:1000 * 10
+      })
+      .success(function (data) {
+        data = $.parseJSON(data);
+        var openDocument = $(".uiIconEcmsOpenDocument").parent();
+        var html = "<i class=\"uiIconEcmsOpenDocument "+data.type+"\"></i>";
+
+        if(data.type==="Open_Word")
+          html+=eXo.ecm.WCMUtils.getBundle('OpenInOfficeConnector.label.open-in-word', eXo.env.portal.language);
+        if(data.type==="Open_Excel")
+          html+=eXo.ecm.WCMUtils.getBundle('OpenInOfficeConnector.label.open-in-excel', eXo.env.portal.language);
+        if(data.type==="Open_Powerpoint")
+          html+=eXo.ecm.WCMUtils.getBundle('OpenInOfficeConnector.label.open-in-powerpoint', eXo.env.portal.language);
+        openDocument.html(html);
+        openDocument.attr("onclick", "eXo.ecm.OpenDocumentInOffice.test('"+data.filePath+"')");
+      });
+
+      var contextMenu = document.getElementById(menuId);
 	    contextMenu.objId = objId;
 	
 	    //help to disable browser context menu
