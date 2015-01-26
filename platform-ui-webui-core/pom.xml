@@ -24,7 +24,7 @@
   <parent>
     <artifactId>platform-ui</artifactId>
     <groupId>org.exoplatform.platform-ui</groupId>
-    <version>4.2.x-SNAPSHOT</version>
+    <version>4.2.x-plfui-upgrade-xwiki-6.4-SNAPSHOT</version>
   </parent>
   <artifactId>platform-ui-webui-core</artifactId>
   <packaging>jar</packaging>
