@@ -5,22 +5,22 @@
 //======================================================//
 
 // Base color
-
-@baseColor:                 #000000; // text color , border color, and other UI elements..
+@baseColor:                 #ffffff; // text color , border color, and other UI elements..
 
 // Background color
-@baseBackground:                 #ffffff; // default background , background for content display....
+@baseBackground:                 #212121; // default background , background for content display....
 
 // Primary Color
-@primaryColor:			#2f5e92; // primary button and link color...
+@primaryColor:			#ff9308; // primary button and link color...
 
 // Background primary color
-@primaryBackground:		#f0f0f0; // main background such as , header popup background, tab items...
+
+@primaryBackground:		#424242; // main background such as , header popup background, tab items...
+
 
 // Image Patch
 // -------------------------
-@images-path: 			"/eXoSkin/skin/images/themes/default";
-
+@images-path: 			"/eXoSkin/skin/images/themes/halloween";
 
 // Accent colors
 // -------------------------
@@ -39,12 +39,11 @@
 // Scaffolding
 // -------------------------
 @bodyBackground: @baseBackground;
-@sidebarBackground: @primaryBackground;
-@contentBackground: 	url("@{images-path}/ShareImages/Background/texture.jpg") repeat left top;
+@sidebarBackground: 	url("@{images-path}/ShareImages/Background/left-bar.jpg") repeat left top;
+@contentBackground: 	url("@{images-path}/ShareImages/Background/texture-halloween.jpg") repeat left top;
 @textColor: @baseColorDark;				// #333333
 @textMediumColor: @baseColorMedium; 					// #808080
 @textLightColor: @baseColorLight;				// #999999
-
 
 // Links
 // -------------------------
@@ -75,6 +74,7 @@
 @btnColor:                            @baseColorDark;
 @btnBorder:                           @borderColor;
 @btnDisableColor :                    @textLightColor;
+
 
 @btnPrimaryColor: #ffffff;
 @btnPrimaryBackground:              @primaryLightColor;
@@ -267,6 +267,7 @@
 @tooltipArrowColor:       @tooltipBackground;
 
 @popoverBackground: @baseBackground;
+
 @popoverArrowWidth:       10px;
 @popoverArrowColor:       @popoverBackground;
 @popoverTitleBackground:  darken(@popoverBackground, 3%);
@@ -355,6 +356,7 @@
 @uiPopupContentBackground: @baseBackground;
 @popupMessageColor: 					@textColor;
 
+
 @multipleMessageBackground: @primaryBackgroundLight;
 @multipleMessageBorder: 				@borderColor;
 
@@ -401,7 +403,6 @@
 @toolbarDarkLinkColor: #ffffff;
 @toolbarDarkLinkHoverColor: #ffffff;
 @toolbarDarkBackgroundHover: #3f3f3f;
-
 @toolbarLightStartBackground:			#f4f4f4;
 @toolbarLightEndBackground:				#d4d4d4;
 @toolbarLightBorder: 					#333333;
